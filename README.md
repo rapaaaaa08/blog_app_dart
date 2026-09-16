@@ -113,6 +113,20 @@ flutter run               # Android emulator (base URL otomatis 10.0.2.2)
 flutter analyze
 ```
 
+## Testing
+
+```bash
+flutter test
+```
+
+Ada **7 test** dan semuanya jalan tanpa perlu server, karena API-nya di-fake pakai `FakeApiService`
+(data disimpan di memori):
+
+| File | Isi |
+| --- | --- |
+| `test/post_model_test.dart` | 3 unit test: parsing `Post.fromJson`, `caption` membuang hashtag, dan parsing tetap aman kalau `author`/`categories` kosong |
+| `test/post_flow_test.dart` | 4 widget test: daftar artikel tampil dari API, caption tanpa hashtag, alur detail → edit → hapus, dan alur buat artikel baru |
+
 ## Endpoint yang Dipakai
 
 Base URL: `http://localhost:3006/api/v1`
