@@ -1,0 +1,25 @@
+# ==============================================================
+# Repo ini KHUSUS aplikasi Flutter (Dart) di folder client/.
+# Backend di folder server/ tidak ikut di-commit (biar ga monolith).
+# ==============================================================
+server/
+
+# Dokumentasi internal — jangan sampai ke-push
+erd.md
+demo-checklist.md
+
+# Safety net kalau nanti folder server/ mau ikut dimasukin
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+
+# ===== OS & Editor =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.iml
